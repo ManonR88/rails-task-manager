@@ -1,0 +1,14 @@
+
+<div class="container">
+  <h1>My tasks</h1>
+  <br>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+
+  <button class="btn btn-success" type="submit">
+    <%= link_to "Add a new task", new_path%>
+  </button>
+</div>
